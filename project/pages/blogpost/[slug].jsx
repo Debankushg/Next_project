@@ -5,21 +5,21 @@ import Navbars from '../../component/Navbars'
 
 // http://localhost:3000/blogpost/How%20to%20learn%20Python
 
-const slug = () => {
+const slug = (props) => {
 
-  const [blog, setBlog] = useState();
+  const [blog, setBlog] = useState(props.myBlogs);
   const router = useRouter();
 
-  useEffect(() => {
-    if (!router.isReady) return;
-    const { slug } = router.query;
-    fetch(`http://localhost:3000/api/getblog?slug=${slug}`).then((a) => {
-      return a.json()
-    })
-      .then((parsed) => {
-        setBlog(parsed);
-      })
-  }, [router.isReady]);
+  // useEffect(() => {
+  //   if (!router.isReady) return;
+  //   const { slug } = router.query;
+  //   fetch(`http://localhost:3000/api/getblog?slug=${slug}`).then((a) => {
+  //     return a.json()
+  //   })
+  //     .then((parsed) => {
+  //       setBlog(parsed);
+  //     })
+  // }, [router.isReady]);
 
 
 
@@ -40,5 +40,13 @@ const slug = () => {
 
   )
 }
+
+export async function getServerSideProps(context) {
+  const { slug } = context.query;
+  let data = await fetch(`http://localhost:3000/api/getblog?slug=${slug}`)
+  let myBlogs = await data.json();
+   
+   return { props: { myBlogs } }
+ }
 
 export default slug
