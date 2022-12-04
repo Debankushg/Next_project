@@ -3,13 +3,30 @@
     justify-content: center;
     align-items: center;
     margin-top: 15px;
+    
 }
 .blogItem{
     padding: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: rgb(241, 189, 206);
+    border: none;
+    text-decoration: none;
 }
 .blog{
     max-width: 45vw;
+    padding: 20px;
+    color: rgb(29, 0, 29);
+    font-weight: bold;
+}
+.text{
+    text-decoration: none;
+}
+.body{ 
+    background: url('../public/10.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Quicksand', sans-serif;
+    height: 100vh;;
+   
 }

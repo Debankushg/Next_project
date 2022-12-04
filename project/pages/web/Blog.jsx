@@ -16,13 +16,13 @@ const Blog = () => {
   
 
   return (
-    <div>
+    <div className={styles.body}>
       <Navbar />
       <div className={styles.container}>
         <main className={styles.main}>
         {blogs.map((blogItem)=>{
           return <div className={styles.blog} key={blogItem.slug}>
-           <Link href={`/blogpost/${blogItem.slug}`}>
+           <Link href={`/blogpost/${blogItem.slug}`} className={styles.text}>
               <h3 className={styles.blogItem}>{blogItem.title}</h3></Link>
               <p>{blogItem.content.substr(0,148)}...</p>
           </div>
