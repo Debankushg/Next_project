@@ -1,5 +1,6 @@
 {
-    "title" : "How to learn javascript",
+    "title" : "How to learn C++",
     "content" : "I’ve been following the most interesting JavaScript blogs quite for a while now.. There are many of them. More than you might think. There are blogs started more than ten years ago, and there are relatively new ones. Some bloggers are JavaScript superstars, and others are regular engineers like you and me. Some blogs are focused on a particular ecosystem (say Angular or React, or Vue), while others are rather general. The exciting thing is that the number of good blogs with really robust material keeps growing from one year to another. It is a promising trend, which hopefully will continue. A few words about who makes it into the list: only the bloggers who write relatively often (at least once per month). Those are all personal blogs, not hubs, companies, etc. And of course, the main metric is the quality of the material.",
-    "author" : "Deva"
+    "author" : "Giridahri",
+    "slug" : "How to learn C++ lang"
 }
