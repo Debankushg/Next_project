@@ -1,5 +1,6 @@
 import Link from "next/link"
 import Navbar from "../../component/Navbars"
+import Footer from "../../component/Footer"
 import styles from "../../styles/Blog.module.css"
 import React ,{useEffect,useState} from "react"
 const Blog = (props) => {
@@ -29,6 +30,7 @@ const Blog = (props) => {
         })}
         </main>
       </div>
+      <Footer/>
     </div>
   )
 }
